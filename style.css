@@ -1,0 +1,94 @@
+.touch-slider-left, .touch-slider-right {
+	display: inline-block;
+	background: rgba(0,0,0,.1);
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	position: absolute;
+	top: 50%;
+	margin-top: -25px;
+	-webkit-transition: background 0.2s;
+	text-align: center;
+	line-height: 50px;
+	text-decoration: none;
+	font-size: 20px
+}
+
+.touch-slider-left:hover, .touch-slider-right:hover {
+	background: rgba(0,0,0,.2)
+}
+
+.touch-slider-left {
+	left: 2%;
+}
+
+.touch-slider-right {
+	right: 2%;
+}
+
+.touch-slider-viewport {
+	overflow: hidden;
+	-webkit-backface-visibility: hidden;
+	position: relative
+}
+
+.touch-slider-viewport ul {
+	position: relative;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	cursor: -webkit-grab;
+	cursor: -moz-grab;
+	overflow: hidden;
+	-webkit-backface-visibility: hidden;
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+
+	/* No support for these yet, use at own risk */
+	-o-user-select: none;
+	user-select: none;
+}
+
+.touch-slider-viewport ul:active {
+	cursor: -webkit-grabbing;
+}
+
+.touch-slider-viewport li {
+	float: left;
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: 100px;
+	overflow: hidden;
+}
+
+.touch-slider-viewport img {
+	display: block;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.touch-slider-menu {
+	text-align: center;
+}
+
+.touch-slider-menu a {
+	display: inline-block;
+	font-size: 0;
+	width: 8px;
+	height: 8px;
+	background: #ddd;
+	border-radius: 4px;
+	margin: 0 2px;
+}
+
+.touch-slider-menu a.select, .touch-slider-menu a:hover {
+	background: #999
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 500px) {
+	.touch-slider-left, .touch-slider-right {
+		display: none
+	}
+}
